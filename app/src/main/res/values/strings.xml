@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">oTTo</string>
+    <string name="title_activity_fourth">oTTo</string>
+    <string name="action_settings">Preferências</string>
+
+    <!--Preferences-->
+    <string name="title_activity_preferencias">Preferências</string>
+    <string name="tela_pref_title">Preferências</string>
+    <string name="tela_pref_estilos">Estilos Musicais:</string>
+    <string name="tela_pref_notificacoes">Notificações:</string>
+    <string name="tela_pref_rock">Rock</string>
+    <string name="tela_pref_mpb">MPB</string>
+    <string name="tela_pref_samba">Samba/Pagode</string>
+    <string name="tela_pref_forro">Forró</string>
+    <string name="tela_pref_sertanejo">Sertanejo</string>
+    <string name="tela_pref_eletronica">Eletrônica</string>
+    <string name="tela_pref_axe">Axé</string>
+    <string name="tela_pref_funk">Funk</string>
+    <string name="tela_pref_country">Country</string>
+    <string name="tela_pref_gospel">Gospel</string>
+    <string name="tela_pref_notif_app">Via APP</string>
+    <string name="tela_pref_notif_email">Via Email</string>
+    <string name="tela_pref_notif_diaria">Diáriamente</string>
+    <string name="tela_pref_notif_semanal">Semanalmente</string>
+    <string name="tela_pref_notif_mensal">Mensalmente</string>
+    <string name="tela_pref_btn_salvar">SALVAR</string>
+</resources>
