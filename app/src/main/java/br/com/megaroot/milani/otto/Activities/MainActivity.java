@@ -1,6 +1,10 @@
 package br.com.megaroot.milani.otto.Activities;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -94,11 +98,18 @@ public class MainActivity extends AppCompatActivity {
         //mCollapsingToolbarLayout.setTitle(getResources().getString(R.string.title_activity_fourth));
         mCollapsingToolbarLayout.setTitleEnabled(false);
 
+        //testa se esta online
+        if (isOnline()){
+            JsonToDB();
+        }else {
+            alert("Verifique sua conexão com a Internet!");
+        }
+
         //Add slider for homescreen
         SliderHome();
 
         //Load json to database
-        JsonToDB();
+
     }
 
     private void JsonToDB() {
@@ -131,10 +142,9 @@ public class MainActivity extends AppCompatActivity {
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                    /*Toast.makeText(getApplicationContext(),
-                            "Error: " + e.getMessage(),
-                            Toast.LENGTH_LONG).show();*/
-                            Log.e("LOG",e.getMessage());
+                    //Toast.makeText(getApplicationContext(),"Error: " + e.getMessage(),
+                            //Toast.LENGTH_LONG).show();
+                            Log.e("LOG", e.getMessage());
                         }
                         //hidepDialog();
                     }
@@ -143,13 +153,34 @@ public class MainActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d("TAG", "Error: " + error.getMessage());
                 Log.e("LOG", error.getMessage());
-                /*Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();*/
+                //Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_SHORT).show();
+                alert(error.getMessage());
                 // hide the progress dialog
                 // hidepDialog();
             }
         });
         AppController.getInstance().addToRequestQueue(showReq);
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return manager.getActiveNetworkInfo() != null &&
+                manager.getActiveNetworkInfo().isConnectedOrConnecting();
+    }
+
+    private void alert(String erro){
+        //Exibe msg de alerta
+        AlertDialog.Builder ADBuilder = new AlertDialog.Builder(MainActivity.this);
+        //ADBuilder.setIcon(R.drawable.ic_dialog_info);
+        ADBuilder.setTitle("Infelizmente ocorreu um erro!");
+        ADBuilder.setMessage(erro);
+        ADBuilder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        ADBuilder.show();
     }
 
     private void SliderHome(){
