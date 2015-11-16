@@ -9,8 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class BDCore extends SQLiteOpenHelper{
 
-    public static final String NOME_BD = "dboTTo";
-    public static final int VERSAO_BD = 10;
+    public static final String NOME_BD = "db_oTTo";
+    public static final int VERSAO_BD = 12;
     public static String QUERY_CREATE_USUARIO = "create table preferencias(_id integer primary key autoincrement, cod text not null, descricao text not null);";
     public static String DROP_TABLE = "drop table preferencias;";
     public static String QUERY_CREATE_SHOWS = "create table shows(_id integer primary key autoincrement, code text not null, band text, thumbnailUrl text, date text, city text, place text, country integer);";

@@ -92,6 +92,8 @@ public class ScheduleActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
                 hidePDialog();
+                Toast.makeText(getApplicationContext(), error.getMessage(),Toast.LENGTH_LONG).show();
+                finish();
 
             }
         });
