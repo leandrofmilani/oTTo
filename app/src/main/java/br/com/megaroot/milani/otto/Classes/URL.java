@@ -5,7 +5,7 @@ package br.com.megaroot.milani.otto.Classes;
  */
 public class URL {
     //EXTERNAL
-    public static final String url = "httsp://otto.site50.net/shows.json";
+    public static final String url = "http://otto.site50.net/shows.json";
 
     //LOCAL
     //public static final String url = "http://192.168.43.72/json_android/shows.json";
