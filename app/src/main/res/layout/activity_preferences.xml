@@ -6,9 +6,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.josemar.projetoagenda2015.PreferenciasActivity"
 
-    android:background="#3b4148">
-    android:background="#3b4148">
-
+    android:background="@color/cardview_dark_background">
     <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -20,7 +18,7 @@
         android:id="@+id/textViewTelaPrefTitle"
         android:layout_below="@+id/section_label"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorTextPrimary"
         android:textStyle="bold"
         android:textSize="30dp" />
 
@@ -34,7 +32,7 @@
         android:layout_toRightOf="@+id/section_label"
         android:layout_toEndOf="@+id/section_label"
         android:layout_marginTop="35dp"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/colorTextPrimary"
         android:textStyle="bold" />
 
     <CheckBox
@@ -47,7 +45,7 @@
         android:layout_toRightOf="@+id/section_label"
         android:layout_alignRight="@+id/textViewTelaPrefEstilos"
         android:layout_alignEnd="@+id/textViewTelaPrefEstilos"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -60,7 +58,7 @@
         android:checked="false"
         android:layout_alignRight="@+id/checkBoxRock"
         android:layout_alignEnd="@+id/checkBoxRock"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -73,7 +71,7 @@
         android:checked="false"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -86,7 +84,7 @@
         android:checked="false"
         android:layout_toRightOf="@+id/section_label"
         android:layout_toEndOf="@+id/section_label"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -99,7 +97,7 @@
         android:checked="false"
         android:layout_toRightOf="@+id/section_label"
         android:layout_toEndOf="@+id/section_label"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -107,7 +105,7 @@
         android:text="@string/tela_pref_eletronica"
         android:id="@+id/checkBoxEletronica"
         android:checked="false"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/colorTextPrimary"
         android:layout_above="@+id/checkBoxAxe"
         android:layout_toRightOf="@+id/buttonTelaPrefSalvar"
         android:layout_toEndOf="@+id/buttonTelaPrefSalvar" />
@@ -121,7 +119,7 @@
         android:layout_alignLeft="@+id/checkBoxEletronica"
         android:layout_alignStart="@+id/checkBoxEletronica"
         android:checked="false"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -132,7 +130,7 @@
         android:layout_alignLeft="@+id/checkBoxAxe"
         android:layout_alignStart="@+id/checkBoxAxe"
         android:checked="false"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -143,7 +141,7 @@
         android:layout_alignLeft="@+id/checkBoxFunk"
         android:layout_alignStart="@+id/checkBoxFunk"
         android:checked="false"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -154,7 +152,7 @@
         android:layout_alignLeft="@+id/checkBoxCountry"
         android:layout_alignStart="@+id/checkBoxCountry"
         android:checked="false"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -166,7 +164,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="28dp"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/colorTextPrimary"
         android:textStyle="bold" />
 
     <RadioButton
@@ -175,7 +173,7 @@
         android:text="@string/tela_pref_notif_diaria"
         android:id="@+id/radioButtonDiaria"
         android:checked="false"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/colorTextPrimary"
         android:layout_below="@+id/textViewNotificacoes"
         android:layout_toRightOf="@+id/section_label"
         android:layout_toEndOf="@+id/section_label" />
@@ -186,7 +184,7 @@
         android:text="@string/tela_pref_notif_semanal"
         android:id="@+id/radioButtonSemanal"
         android:checked="true"
-        android:textColor="#FFFFFFFF"
+        android:textColor="@color/colorTextPrimary"
         android:layout_below="@+id/radioButtonDiaria"
         android:layout_alignLeft="@+id/radioButtonDiaria"
         android:layout_alignStart="@+id/radioButtonDiaria" />
@@ -200,7 +198,7 @@
         android:layout_below="@+id/radioButtonSemanal"
         android:layout_alignLeft="@+id/radioButtonSemanal"
         android:layout_alignStart="@+id/radioButtonSemanal"
-        android:textColor="#FFFFFFFF" />
+        android:textColor="@color/colorTextPrimary" />
 
     <Button
         android:layout_width="wrap_content"
@@ -209,6 +207,6 @@
         android:id="@+id/buttonTelaPrefSalvar"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="#663399"
-        android:textColor="#FFFFFFFF" />
+        android:background="@color/colorTextPrimary"
+        android:textColor="@color/colorPrimaryDark" />
 </RelativeLayout>
